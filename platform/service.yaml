@@ -1,0 +1,11 @@
+apiVersion: platform.service/v1
+kind: Service
+metadata:
+  name: self-service-cicd-demo
+spec:
+  owner: platform-demo
+  repository: https://github.com/marco13-moo/self-service-cicd-demo
+  environment: preview
+  deployment:
+    containerPort: 8080
+    dockerfile: Dockerfile
